@@ -39,8 +39,7 @@ function Main(props) {
 		return cardArray;
 	}
 	useEffect(() => {
-		console.log(pickedPics);
-		console.log(score);
+		props.onCardClick(score);
 	});
 	function cardOnclick(e) {
 		const id = e.currentTarget.dataset.id;
@@ -65,7 +64,8 @@ function Main(props) {
 							className='card-item'
 							key={index}
 							data-id={images[index].id}
-							onClick={(e) => cardOnclick(e)}
+							// onClick={(e) => cardOnclick(e)}
+							onClick={cardOnclick}
 						>
 							<img
 								src={images[index].src}
