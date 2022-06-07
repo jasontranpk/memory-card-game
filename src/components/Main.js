@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import '../style/Main.css';
 function Main(props) {
 	const [pickedPics, setPickedPics] = useState([]);
 	const [score, setScore] = useState(0);
